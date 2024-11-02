@@ -12,7 +12,7 @@ function PlannedEvent() {
     useEffect(() => {
         const fetchPlannedEvent = async () => {
             try {
-                const response = await axios.get("http://localhost:5100/api/event/getPlannedEvent", {
+                const response = await axios.get("https://event-link-admin-server.vercel.app/api/event/getPlannedEvent", {
                     params: {
                         adminemail: user.email
                     }
@@ -39,7 +39,7 @@ function PlannedEvent() {
 
     const handleDelete = async (data) => {
         try {
-            const response = await axios.delete("http://localhost:5100/api/event/deleteEvent", {
+            const response = await axios.delete("https://event-link-admin-server.vercel.app/api/event/deleteEvent", {
                 params: {
                     data: data._id
                 }
@@ -80,7 +80,7 @@ function PlannedEvent() {
             adminemail: selectedEvent.adminemail,
         };
         try {
-            const response = await axios.patch("http://localhost:5100/api/event/editEvent", { data: data });
+            const response = await axios.patch("https://event-link-admin-server.vercel.app/api/event/editEvent", { data: data });
 
             setEvents(response.data.events);
             toggleModal();
