@@ -11,6 +11,18 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.use(cors({
+    origin: "https://event-link-admin-client.vercel.app", 
+    methods: ["POST", "GET","PATCH","DELETE"],
+    credentials: true
+  }));
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://event-link-admin-client.vercel.app"); 
+    res.header("Access-Control-Allow-Methods", "GET, POST, PATCH, OPTIONS,DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.header("Access-Control-Allow-Credentials", "true");
+    next();
+  });
 app.use(cors());
 app.use(express.json());
 app.use(express.json({ limit: '100mb' }));
