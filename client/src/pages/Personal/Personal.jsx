@@ -59,7 +59,7 @@ function Personal() {
   };
 
   const handleSaveChanges = async () => {
-    const response = await axios.patch("http://localhost:5100/api/user/updateUserDetail", {
+    const response = await axios.patch("https://event-link-admin-server.vercel.app/api/user/updateUserDetail", {
       name: editProfileData.name,
       profile: profilePreview,
       username:user?.username
@@ -70,7 +70,7 @@ function Personal() {
 
   const handleDeleteAccount = async() => {
     console.log("Account Deleted");
-    const response = await axios.post("http://localhost:5100/api/user/deleteUser", {
+    const response = await axios.post("https://event-link-admin-server.vercel.app/api/user/deleteUser", {
       username:user?.username
     });
     console.log(response.data.message);
