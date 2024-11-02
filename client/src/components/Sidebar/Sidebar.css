@@ -1,0 +1,96 @@
+.profile-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.profile-sidebar {
+    position: relative;
+    width: 250px;
+    background-image: url('../../assets/sideImg.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.profile-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); 
+    z-index: 1;
+}
+
+.profile-sidebar-header {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.profile-sidebar-image {
+    width: 50px;  
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; 
+}
+
+.profile-sidebar-name {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+}
+
+.profile-sidebar ul {
+    position: relative;
+    z-index: 2; 
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-sidebar li {
+    padding: 15px 10px;
+    color: #ecf0f1;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #34495e;
+    transition: background 0.3s ease;
+}
+
+.profile-sidebar li:hover,
+.profile-sidebar li.active {
+    background-color: #5c666f;
+}
+
+.profile-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.content-section {
+
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    color: #7f8c8d;
+}

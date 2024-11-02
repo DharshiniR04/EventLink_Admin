@@ -1,0 +1,247 @@
+.scheduler-container {
+  position: relative;
+  display: flex;
+}
+
+.calendar-section {
+  flex-grow: 1;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-date {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.year-input {
+  width: 80px;
+  text-align: center;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.arrow-btn:hover {
+  color: #8697aa;
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.year-input {
+  width: 80px;
+  text-align: center;
+}
+
+.month {
+  max-width: 205px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 700px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  animation: slideIn 0.3s forwards;
+  overflow-y: auto;
+}
+
+@keyframes slideIn {
+  from {
+    right: -600px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.blurred {
+  filter: blur(5px);
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  flex: 1;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  flex: 2;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 80px;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.create-btn,
+.remove-btn,
+.add-btn {
+  background-color: #687799;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.create-btn:hover,
+.remove-btn:hover,
+.add-btn:hover {
+  background-color: #435d98;
+}
+
+.cancel-btn {
+  background-color: #ad4f58;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #7d2a32;
+}
+
+.rule-input-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.rule-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.rule-btn:hover {
+  background-color: #45a049;
+}
+
+.rules-list {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.rules-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.rules-list button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rules-list button:hover {
+  background-color: darkred;
+}
+
+
+.rule {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.rule-list-section {
+  margin-top: 10px; 
+  margin-left: 0;   
+}
+
+.rules-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.rule-input-section input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.rule-input-section button {
+  flex-shrink: 0;
+}
