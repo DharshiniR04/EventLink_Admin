@@ -129,7 +129,7 @@ const EventScheduler = () => {
     const formattedTime=formatTime(data.time);
 
     try {
-      const response = await axios.post("http://localhost:5100/api/event/addevent", { name: data.name, date: data.date, time: formattedTime, duration: data.duration, location: data.location, category: data.category });
+      const response = await axios.post("https://event-link-admin-server.vercel.app/api/event/addevent", { name: data.name, date: data.date, time: formattedTime, duration: data.duration, location: data.location, category: data.category });
       if (response.data.message === "Event Already Exists") {
         alert("Event Already Exists");
       }
@@ -183,7 +183,7 @@ const EventScheduler = () => {
 
 
     try {
-      const response = await axios.post("http://localhost:5100/api/event/addeventdetail", data);
+      const response = await axios.post("https://event-link-admin-server.vercel.app/api/event/addeventdetail", data);
 
       if (response.data.message === "Updated successfully") {
         alert("Updated successfully");
